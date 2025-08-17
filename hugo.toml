@@ -11,6 +11,11 @@ copyright = "ML랄드"
 [markup.highlight]
   noClasses = false
 
+# for github pages
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
+
 [params]
   # dir name of your main content (default is `content/posts`).
   # the list of set content will show up on your index page (baseurl).
