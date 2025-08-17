@@ -1,14 +1,14 @@
 # ml-rald.github.io
 
-ML랄드의 세번쨰 스터디를 위한 윕 공간입니다. ML랄드는 아카데미에서의 마지막 챌린지인 C6를 맞이하며, ML과 관련된 자유로운 아티클 쓰기 스터디를 진행합니다.
+ML랄드의 세번쨰 스터디를 위한 웹 공간입니다. ML랄드는 아카데미에서의 마지막 챌린지인 C6를 맞이하며, ML과 관련된 자유로운 아티클 쓰기 스터디를 진행합니다.
 
 ## 글쓰기 인스트럭션
 
 1. 이슈를 올립니다.
 2. 브랜치를 적당하게 만듭니다.  
-    > ex> posts/use-coreml-tools-to-convert-pytorch-model
+    > ex> git switch -c posts/use-coreml-tools-to-convert-pytorch-model
 3. content/posts 디렉토리에 적당한 이름으로 디렉토리를 하나 만들고 index.md를 작성합니다.  
-    > ex> posts/use-coreml-tools-to-convert-pytorch-model/index.md
+    > ex> content/posts/use-coreml-tools-to-convert-pytorch-model/index.md
 
     ```md
     +++
