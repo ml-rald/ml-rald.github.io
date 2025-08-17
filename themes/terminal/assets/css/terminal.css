@@ -365,8 +365,6 @@ td {
 th {
   border-style: solid;
   color: var(--foreground);
-  text-align: left;
-  text-transform: uppercase;
   letter-spacing: 0.04em;
 }
 
