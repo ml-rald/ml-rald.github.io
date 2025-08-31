@@ -20,34 +20,34 @@ hideComments = false
 
 ## 이미지 처리 방식의 종류
 
-#### Classification
+### Classification
 
 - 입력으로 주어진 이미지 안의 객체의 종류를 구분
 - MNIST 데이터 셋의 경우, 0부터 9까지 총 10가지의 숫자를 각각의 Class로 구분
 
-#### Localization
+### Localization
 
 - 입력으로 주어진 이미지 안의 객체가 이미지 안의 어느 위치에 존재하는지 위치정보를 판단
 - 주로 Bounding Box를 사용
 
-#### Object Detection
+### Object Detection
 
 - Classification + Localization
 - 이미지 안의 객체 위치와 객체의 종류를 동시에 출력
 
-#### Segmentation
+### Segmentation
 
 - 픽실 단위로 한 Classification
     - 주어진 이미지 내에서 각 픽셀이 어떤 클래스에 속하는지 분류
 - 각 픽셀로 분류된 클래스는 모델이 만든 결과물인 마스크에 픽셀 단위로 기록
     - 특정 픽셀이 어떤 클래스에도 해당하지 않은 경우, 0으로 표기
 
-###### Semantic Segmentation
+#### Semantic Segmentation
 
 - 분할의 기본 단위를 클래스로 설정
 - 만일 두개 이상의 사물이 동일한 클래스에 해당한다면 이들은 서로 같은 예측 마스크값
 
-###### Instance Segmentation
+#### Instance Segmentation
 
 - 분할의 기본 단위를 사물로 설정
 - 만일 두개 이상의 사물이 동일한 클래스에 해당하더라고, 서로 다른 사물이란 서로 다른 예측 마스크값
@@ -56,7 +56,7 @@ hideComments = false
 
 ## U-Net 모델과 구조
 
-#### U-Net이란?
+### U-Net이란?
 
 - Semantic Segmentation 수행을 위해 널리 쓰이는 모델 중 하나
 - 네트워크 형태가 알파넷 U와 비슷하다고 하여 붙여진 이름, 의생명공학 이미지 Segmentation을 위해 개발됨
@@ -91,7 +91,7 @@ hideComments = false
         - 위치가 대응(픽셀 좌표가 1:1로 대응)
         - Decoder의 특정 단계 feature map 크기 = Encoder의 대응 단계 feature map 크기
 
-#### 장점
+### 장점
 
 - 기존 Segmentation 모델의 문제점 해결
     - 빠른 속도
@@ -101,20 +101,20 @@ hideComments = false
         이 둘은 Trade-Off의 관계
         - U-Net은 다층의 Layer의 Output을 동시에 검증해서 이러한 Trade-Off를 극복합니다.
 
-#### U-Net with EfficientNet
+### U-Net with EfficientNet
 
 - U-Net의 구조는 알파벳 U의 왼쪽 절반에 해당하는 Contracting Path와 오른쪽 절반에 해당하는 Expanding Path의 2가지 Path로 분리할 수 있다
 
 ![unet_구조](./unet2.png)
 
-###### Contracting Path
+#### Contracting Path
 
 ![unet_contracting](./unet_contracting.png)
 
 - Encoder 역할을 수행하는 부분 → Convolution 네트워크 구성
 - 입력을 Feature Map으로 변형해 이미지의 Context 파악
 
-###### Expanding Path
+#### Expanding Path
 
 ![unet_expanding](./unet_expanding.png)
 
